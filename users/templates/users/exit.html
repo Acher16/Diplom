@@ -1,0 +1,9 @@
+{% extends 'ref/main.html' %}
+{% block main_section %}
+    <div class="main">
+        <div class="exit">
+            <p class="head">Вы успешно вышли из аккаунта<p>
+            <p><a href="{% url 'auth' %}" class="ref">Войти в личный кабинет снова</a></p>
+        </div>
+    </div>
+{% endblock %}

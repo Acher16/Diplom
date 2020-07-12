@@ -1,0 +1,20 @@
+{% extends 'ref/main.html' %}
+{% block main_section %}
+    <div class="main">
+        <div class="form-section">
+            <form method="POST" class="form-reg">
+                <p class="head">Рeгистрация на сайте</p>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <ul>
+                    <li>Ваш пароль не должен совпадать с вашим именем или другой персональной информацией или быть слишком похожим на неё.</li>
+                    <li>Ваш пароль должен содержать как минимум 8 символов.</li>
+                    <li>Ваш пароль не может быть одним из широко распространенных паролей.</li>
+                    <li>Ваш пароль не может состоять только из цифр.</li>
+                </ul>
+                <button type="submit" class="btn">Зарегестрироваться</button><br>
+                <span>Уже зарегестрированы? <a href="{% url 'auth' %}" class="ref">Войти в личный кабинет</a></span>
+            </form>
+        </div>
+    </div>
+{% endblock %}

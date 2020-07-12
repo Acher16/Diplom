@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #585e5e;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+header {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.block-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block-header .block-1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.block-header .block-1 > p {
+    width: 220px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.block-header .block-2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.block-header .block-2 > a {
+    margin-left: 20px;
+    text-decoration: none;
+    transition: text-decoration 1s;
+}
+
+.block-header .block-2 > a:hover {text-decoration: underline;}
+
+.block-header .block-1 > img {
+    width: 100px;
+    height: 100px;
+}
+
+body {
+    width: 80%;
+    margin: 10px 10%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+/* Регистрация, авторизация, личный кабинет */
+
+.form-section {
+  width: 400px;
+}
+
+.form-section > p, .form-section > div {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-section > div > p > span {
+    font-weight: 700;
+    color: #131414;
+}
+
+.form-section > form {
+    width: 100%;
+}
+
+.head {
+    font-size: 20px;
+    font-weight: 700;
+    color: #131414;
+    text-align: center;
+}
+
+.form-section > form > p {
+    margin-bottom: 15px;
+}
+
+.form-section > form > p > * {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-section > form > p > label {
+    margin-bottom: 15px;
+}
+
+.form-section > form > p > input {
+    width: 385px;
+    height: 35px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #585e5e;
+}
+
+.form-section > form > ul > li {
+    margin: 2px 17px;
+}
+
+.form-section > form > p > span {
+    margin: 2px 0px;
+    margin-right: 17px;
+}
+
+.btn {
+    width: 200px;
+    margin: 20px 0px;
+    padding: 12px;
+    border-radius: 5px;
+    background: #ff2a00;
+    color: #fafafa;
+    border: none;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+.ref {
+    color: #ff2a00;
+    text-decoration: none;
+    transition: text-decoration 1s;
+}
+
+.ref:hover {text-decoration: underline;}
+
+/* Выйти */
+
+.exit {
+    width: 400px;
+
+}
+
+.exit > p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Главаня */
+
+.home {
+    width: 400px;
+    margin-top: 10px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.home > h1, .home > p, .home > div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.home > h1 {
+    color: #131414;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.home > div {
+    padding: 15px 0;
+}
+
+.btn-home {
+    padding: 12px;
+    border-radius: 5px;
+    background: #ff2a00;
+    color: #fafafa;
+    border: none;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.btn-home:hover {
+    opacity: .7;
+}
+
+/* Ссылки */
+
+.form-section > div.list-ref {
+    width: 100%;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-section > div.list-ref .slug-ref {
+    display: flex;
+    justify-content: space-between;
+}

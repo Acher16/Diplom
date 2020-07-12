@@ -1,0 +1,14 @@
+{% extends 'ref/main.html' %}
+{% block main_section %}
+    <div class="main">
+        <div class="home">
+            <h1>Сокра.тим</h1>
+            <p>Быстро сократим любую длинную ссылку для вашего проекта</p>
+            {% if user.is_authenticated %}
+                <div><a class="btn-home" href="{% url 'profile' %}">Кабинет пользователя</a></div>
+            {% else %}
+                <div><a class="btn-home" href="{% url 'auth' %}">Кабинет пользователя</a></div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

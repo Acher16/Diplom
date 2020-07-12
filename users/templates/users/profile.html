@@ -1,0 +1,19 @@
+{% extends 'ref/main.html' %}
+{% block main_section %}
+    <div class="main">
+        <div class="form-section">
+            <p class="head">Кабиент пользователя</p>
+            <div>
+                <p><span>@{{ user.username }}</span></p>
+                <p><span>Email:</span> {{ user.email }}</p>
+            </div>
+            <p><a class="btn-home" href="{% url 'exit' %}">Выйти из кабинета</a></p>
+            <form method="POST" class="form-reg" enctype="multipart/form-data">
+                <p class="head">Изменить данные про пользователя</p>
+                {% csrf_token %}
+                {{ update_user.as_p }}
+                <button type="submit" class="btn">Обновить данные</button><br>
+            </form>
+        </div>
+    </div>
+{% endblock %}

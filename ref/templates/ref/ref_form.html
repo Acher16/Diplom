@@ -1,0 +1,24 @@
+{% extends 'ref/main.html' %}
+{% block main_section %}
+    <div class="main">
+        <div class="form-section">
+            <form method="POST" class="form-reg">
+                <p class="head">Создание ссылок</p>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn">Создать ссылку</button><br>
+            </form>
+            <p class="head">Доступные ссылки</p>
+            <div class="list-ref">
+                {% for ref in refs %}
+                    {% if ref.avtor == user %}
+                        <div class="slug-ref">
+                            <span>Ссылка - <a href="{{ ref.site_url }}" class="ref">/link/{{ ref.slug }}</a></span>
+                            <p>{{ ref.title }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

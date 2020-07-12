@@ -1,0 +1,14 @@
+{% extends 'ref/main.html' %}
+{% block main_section %}
+    <div class="main">
+        <div class="form-section">
+            <form method="POST" class="form-reg">
+                <p class="head">Авторизация на сайте</p>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn">Войти</button><br>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
